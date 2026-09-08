@@ -3,7 +3,7 @@
   "channel": "stable",
   "version": "1.2.18",
   "update_available": true,
-  "mandatory": false,
+"mandatory": false,
   "download_url": "https://raw.githubusercontent.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/refs/heads/main/NAUDIO_AFB_UNIVERSAL_UPDATE_1.2.18_FIXED.zip",
   "sha256": "54F9BDCA806CCEEF27C57BA5D9DC4D70F15FCC5FE7E3CBAEBF970E03D43310F6",
   "release_notes": "NAUDIO AFB Universal v1.2.18 - cập nhật hệ thống tự động an toàn."
