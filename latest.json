@@ -2,9 +2,9 @@
     "product":  "NAUDIO_AFB_UNIVERSAL",
     "channel":  "stable",
     "version":  "1.2.19",
-    "update_available":  false,
+    "update_available":  true,
     "mandatory":  false,
     "download_url":  "https://raw.githubusercontent.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/main/NAUDIO_AFB_UNIVERSAL_UPDATE_1.2.19.zip",
     "sha256":  "8D8E1CEC74BD1D62071BC2BF6602311277563C1763922DAFC33B407416C12860",
-    "release_notes":  "NAUDIO AFB Universal v1.2.19 - cập nhật hệ thống dùng thử và cập nhật an toàn."
+    "release_notes":  "NAUDIO AFB Universal v1.2.19 - cß║¡p nhß║¡t hß╗ç thß╗æng d├╣ng thß╗¡ v├á cß║¡p nhß║¡t an to├án."
 }
