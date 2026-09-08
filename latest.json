@@ -2,7 +2,7 @@
   "product": "NAUDIO_AFB_UNIVERSAL",
   "channel": "stable",
   "version": "1.2.18",
-  "update_available": true,
+  "update_available": false
   "mandatory": false,
   "download_url": "https://raw.githubusercontent.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/refs/heads/main/NAUDIO_AFB_UPDATE_TEST_1.2.18.zip",
   "sha256": "DEC93A928566DE98960C18AE76DB3CAD56C1CDFADB861F2C03A2559E251C8759",
