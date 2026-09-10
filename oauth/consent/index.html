@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NAUDIO - Cấp quyền truy cập</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;background:#071014;color:#e7f6f7;font-family:Arial,Helvetica,sans-serif}
+    .card{width:100%;max-width:540px;padding:30px 24px;background:#0b171c;border:1px solid #20e0d8;border-radius:16px;box-shadow:0 0 28px rgba(32,224,216,.12)}
+    .brand{color:#20e0d8;text-align:center;font-weight:bold;letter-spacing:1px;margin-bottom:20px} h1{text-align:center;font-size:24px;margin:0 0 20px}
+    p{color:#c8dadd;line-height:1.6} label{display:block;margin:14px 0 7px;color:#c8dadd} input{width:100%;padding:13px;background:#071014;border:1px solid #40545a;border-radius:7px;color:white;font-size:16px}
+    button{padding:13px 16px;border:1px solid #20e0d8;border-radius:7px;background:#0b171c;color:#20e0d8;font-weight:bold;font-size:15px;cursor:pointer} button:disabled{opacity:.45;cursor:not-allowed}
+    .primary{width:100%;margin-top:20px}.actions{display:flex;gap:12px;margin-top:22px}.actions button{flex:1}.deny{border-color:#788b90;color:#c8dadd}
+    .box{padding:15px;border:1px solid #233238;border-radius:9px;background:#081216;margin:16px 0}.muted{color:#8da5aa;font-size:13px}.error{color:#ffb020}.ok{color:#20e0d8}.hidden{display:none} ul{padding-left:22px;color:#c8dadd}
+  </style>
+</head>
+<body>
+<div class="card">
+  <div class="brand">NAUDIO REMOTE</div>
+  <h1>CẤP QUYỀN CHO CHATGPT</h1>
+  <div id="status" class="muted">Đang kiểm tra yêu cầu...</div>
+  <section id="login" class="hidden">
+    <p>Đăng nhập tài khoản NAUDIO để xác nhận quyền truy cập.</p>
+    <label>Email</label>
+    <input id="email" type="email" autocomplete="username">
+    <label>Mật khẩu</label>
+    <input id="password" type="password" autocomplete="current-password">
+    <button id="loginBtn" class="primary">ĐĂNG NHẬP</button>
+  </section>
+  <section id="consent" class="hidden">
+    <div class="box">
+      <div><strong id="clientName">ChatGPT</strong> muốn kết nối với NAUDIO Remote.</div>
+      <p class="muted" id="redirectInfo"></p>
+    </div>
+    <div>Quyền được yêu cầu:</div>
+    <ul id="scopes"></ul>
+    <p class="muted">Chỉ cấp quyền nếu bạn đang chủ động kết nối ChatGPT với máy Windows của mình.</p>
+    <div class="actions">
+      <button id="denyBtn" class="deny">TỪ CHỐI</button>
+      <button id="approveBtn">CHO PHÉP</button>
+    </div>
+  </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL="https://wflpchaophmelkyktsel.supabase.co";
+const SUPABASE_KEY="sb_publishable_I1w3wYHJYGqSVtQ_ylz2jQ_Ma8YxzJh";
+const client=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+const params=new URLSearchParams(location.search);
+const authorizationId=params.get("authorization_id");
+const statusEl=document.getElementById("status");
+const loginEl=document.getElementById("login");
+const consentEl=document.getElementById("consent");
+const loginBtn=document.getElementById("loginBtn");
+const approveBtn=document.getElementById("approveBtn");
+const denyBtn=document.getElementById("denyBtn");
+function status(text,kind="muted"){statusEl.textContent=text;statusEl.className=kind}
+function showLogin(){loginEl.classList.remove("hidden");consentEl.classList.add("hidden");status("Vui lòng đăng nhập tài khoản NAUDIO.")}
+function showConsent(){loginEl.classList.add("hidden");consentEl.classList.remove("hidden")}
+function setBusy(value){loginBtn.disabled=value;approveBtn.disabled=value;denyBtn.disabled=value}
+async function loadAuthorization(){
+  if(!authorizationId){status("Thiếu authorization_id. Hãy bắt đầu kết nối lại từ ChatGPT.","error");return}
+  const {data:{session}}=await client.auth.getSession();
+  if(!session){showLogin();return}
+  status("Đang tải yêu cầu cấp quyền...");
+  const {data,error}=await client.auth.oauth.getAuthorizationDetails(authorizationId);
+  if(error||!data){status(error?.message||"Yêu cầu cấp quyền không hợp lệ.","error");return}
+  if(!("authorization_id" in data)&&data.redirect_url){location.href=data.redirect_url;return}
+  document.getElementById("clientName").textContent=data.client?.name||"ChatGPT";
+  document.getElementById("redirectInfo").textContent=data.redirect_uri?"Trả kết quả về: "+data.redirect_uri:"";
+  const scopeText=(data.scope||"").trim();
+  const list=document.getElementById("scopes"); list.innerHTML="";
+  (scopeText?scopeText.split(/\s+/):["Kết nối tài khoản NAUDIO"]).forEach(s=>{const li=document.createElement("li");li.textContent=s;list.appendChild(li)});
+  showConsent(); status("Kiểm tra thông tin rồi chọn Cho phép hoặc Từ chối.","ok");
+}
+loginBtn.addEventListener("click",async()=>{
+  const email=document.getElementById("email").value.trim();
+  const password=document.getElementById("password").value;
+  if(!email||!password){status("Nhập email và mật khẩu NAUDIO.","error");return}
+  setBusy(true); status("Đang đăng nhập...");
+  const {error}=await client.auth.signInWithPassword({email,password});
+  setBusy(false);
+  if(error){status("Email hoặc mật khẩu không đúng.","error");return}
+  await loadAuthorization();
+});
+approveBtn.addEventListener("click",async()=>{
+  setBusy(true); status("Đang cấp quyền...");
+  const {data,error}=await client.auth.oauth.approveAuthorization(authorizationId);
+  if(error||!data){setBusy(false);status(error?.message||"Không thể cấp quyền.","error");return}
+  location.href=data.redirect_url;
+});
+denyBtn.addEventListener("click",async()=>{
+  setBusy(true); status("Đang từ chối yêu cầu...");
+  const {data,error}=await client.auth.oauth.denyAuthorization(authorizationId);
+  if(error||!data){setBusy(false);status(error?.message||"Không thể xử lý yêu cầu.","error");return}
+  location.href=data.redirect_url;
+});
+loadAuthorization().catch(()=>status("Không thể tải yêu cầu cấp quyền.","error"));
+</script>
+</body>
+</html>
