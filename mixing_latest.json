@@ -1,11 +1,11 @@
 {
   "product": "NAUDIO_SMART_MIXING",
   "channel": "stable",
-  "version": "1.0.200",
-  "build": "QA200",
+  "version": "1.0.202",
+  "build": "QA202",
   "update_available": true,
-  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.200/NAUDIO_SMART_MIXING_v1.0.200.zip",
-  "sha256": "8F37F464E90C49EE314E9C10F0DB5098AE24AC88BA54C74234AF6BF3B4D7D810",
-  "size": 227505504,
-  "release_notes": "Live Host: một rack thiếu plug-in (ví dụ Waves thiếu license lúc khởi động) không còn làm hỏng việc lưu cả phiên; rack đó giữ nguyên plug-in đã lưu, các rack khác vẫn lưu bình thường. Gồm luôn 1.0.199: nút BÁO LỖI."
+  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.202/NAUDIO_SMART_MIXING_v1.0.202.zip",
+  "sha256": "DCB21451FB871E5C3DD1AA68CD6D26AB5A4521437B409BFEE8585D6CA5A55E55",
+  "size": 227514830,
+  "release_notes": "XR / MR: AFB có BUS NHẠC stereo (tên INSTRUMENT), bus vocal tên VOCAL, chỉ hai bus này vào LR khi bật AFB; không còn bắt PHỤC HỒI ROUTING, AFB tự dò và sửa routing rồi bật. Trang Main: LR / DCA / Mute group của Bus, Aux, FX bấm được. X32 / M32 không đổi."
 }
