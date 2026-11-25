@@ -2,10 +2,10 @@
   "product": "NAUDIO_SMART_MIXING",
   "channel": "stable",
   "version": "1.0.196",
-  "build": "QA196",
+  "build": "QA196B",
   "update_available": true,
   "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.196/NAUDIO_SMART_MIXING_v1.0.196.zip",
-  "sha256": "4915473F8F6F0FBCFAD026545AD77F2E1319BEEC7D2B3449CC8667CE8884BF50",
-  "size": 227478803,
+  "sha256": "9DABE3F0349B343F1AC2248E84736F52CA556AEF63751EE7706E50A9AA286DA1",
+  "size": 227478136,
   "release_notes": "Bản đầu tiên có nút CẬP NHẬT trong app. Khung AFB nổi (AFB / FADER / AUTO FX / Dynamic Vocal / Xóa notch), FADER bật một lần bấm, Xóa notch không hỏi."
 }
