@@ -1,11 +1,11 @@
 {
   "product": "NAUDIO_SMART_MIXING",
   "channel": "stable",
-  "version": "1.0.197",
-  "build": "QA197",
+  "version": "1.0.198",
+  "build": "QA198",
   "update_available": true,
-  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.197/NAUDIO_SMART_MIXING_v1.0.197.zip",
-  "sha256": "C922B3F7F360BBBAB534AA84B57A942111A2A1D1099F47B225BE6F31A063CC58",
-  "size": 227478875,
-  "release_notes": "Màn hình nền mới: thêm DYNAMIC EQ (EQ động 8 vùng cho bus vocal) và RECORDER, ghi đủ các dòng mixer X32 / M32 và XR / MR. Bộ cập nhật an toàn hơn: nếu không khởi động được thì giữ nguyên bản cũ."
+  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.198/NAUDIO_SMART_MIXING_v1.0.198.zip",
+  "sha256": "5F568E603D3252A5DDA9BACA4D89446491BAAD6F9C24CD900B356EEA1CFB3597",
+  "size": 227479587,
+  "release_notes": "Trang EQ: khung RACK 13 / 14 không còn đè lên biểu đồ EQ trên màn hình nhỏ / scale cao. Gồm luôn 1.0.197: màn hình nền mới có DYNAMIC EQ, RECORDER và đủ các dòng mixer X32 / M32, XR / MR."
 }
