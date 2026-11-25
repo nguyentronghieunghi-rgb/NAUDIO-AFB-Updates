@@ -1,11 +1,11 @@
 {
   "product": "NAUDIO_SMART_MIXING",
   "channel": "stable",
-  "version": "1.0.196",
-  "build": "QA196B",
+  "version": "1.0.197",
+  "build": "QA197",
   "update_available": true,
-  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.196/NAUDIO_SMART_MIXING_v1.0.196.zip",
-  "sha256": "9DABE3F0349B343F1AC2248E84736F52CA556AEF63751EE7706E50A9AA286DA1",
-  "size": 227478136,
-  "release_notes": "Bản đầu tiên có nút CẬP NHẬT trong app. Khung AFB nổi (AFB / FADER / AUTO FX / Dynamic Vocal / Xóa notch), FADER bật một lần bấm, Xóa notch không hỏi."
+  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.197/NAUDIO_SMART_MIXING_v1.0.197.zip",
+  "sha256": "C922B3F7F360BBBAB534AA84B57A942111A2A1D1099F47B225BE6F31A063CC58",
+  "size": 227478875,
+  "release_notes": "Màn hình nền mới: thêm DYNAMIC EQ (EQ động 8 vùng cho bus vocal) và RECORDER, ghi đủ các dòng mixer X32 / M32 và XR / MR. Bộ cập nhật an toàn hơn: nếu không khởi động được thì giữ nguyên bản cũ."
 }
