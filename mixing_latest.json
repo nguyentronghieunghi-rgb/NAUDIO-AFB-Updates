@@ -1,11 +1,11 @@
 {
   "product": "NAUDIO_SMART_MIXING",
   "channel": "stable",
-  "version": "1.0.202",
-  "build": "QA202",
+  "version": "1.0.203",
+  "build": "QA203",
   "update_available": true,
-  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.202/NAUDIO_SMART_MIXING_v1.0.202.zip",
-  "sha256": "DCB21451FB871E5C3DD1AA68CD6D26AB5A4521437B409BFEE8585D6CA5A55E55",
-  "size": 227514830,
-  "release_notes": "XR / MR: AFB có BUS NHẠC stereo (tên INSTRUMENT), bus vocal tên VOCAL, chỉ hai bus này vào LR khi bật AFB; không còn bắt PHỤC HỒI ROUTING, AFB tự dò và sửa routing rồi bật. Trang Main: LR / DCA / Mute group của Bus, Aux, FX bấm được. X32 / M32 không đổi."
+  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.203/NAUDIO_SMART_MIXING_v1.0.203.zip",
+  "sha256": "C4DE3A8570C9A6EA69508BB3E673AB2503147049270884B08D1B81978BBC94D9",
+  "size": 227532454,
+  "release_notes": "Đổi máy cho tài khoản: khi license đang ở máy khác, app báo tên máy đó và hỏi CHUYỂN LICENSE SANG MÁY NÀY (1 lần / 7 ngày, tối đa 3 lần / 12 tháng). Cài lại Windows trên cùng máy không tính lượt. License gắn thêm mainboard để chống sao chép ổ đĩa. Mọi model."
 }
