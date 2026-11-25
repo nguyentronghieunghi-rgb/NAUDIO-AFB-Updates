@@ -1,11 +1,11 @@
 {
   "product": "NAUDIO_SMART_MIXING",
   "channel": "stable",
-  "version": "1.0.199",
-  "build": "QA199",
+  "version": "1.0.200",
+  "build": "QA200",
   "update_available": true,
-  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.199/NAUDIO_SMART_MIXING_v1.0.199.zip",
-  "sha256": "F8ACFB7DD57184A5290091AC092781FDB87280DC81BBA6C5CFFDDAB423671FD0",
-  "size": 227502423,
-  "release_notes": "Thêm nút BÁO LỖI: gửi nhật ký và ảnh app cho NAUDIO để sửa lỗi (email, mật khẩu được xóa trước khi gửi). App tự ghi lại lỗi khi bị văng và hỏi gửi ở lần mở sau. Gồm luôn 1.0.197 / 1.0.198: màn hình nền mới, khung RACK không đè EQ trên màn hình nhỏ."
+  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.200/NAUDIO_SMART_MIXING_v1.0.200.zip",
+  "sha256": "8F37F464E90C49EE314E9C10F0DB5098AE24AC88BA54C74234AF6BF3B4D7D810",
+  "size": 227505504,
+  "release_notes": "Live Host: một rack thiếu plug-in (ví dụ Waves thiếu license lúc khởi động) không còn làm hỏng việc lưu cả phiên; rack đó giữ nguyên plug-in đã lưu, các rack khác vẫn lưu bình thường. Gồm luôn 1.0.199: nút BÁO LỖI."
 }
