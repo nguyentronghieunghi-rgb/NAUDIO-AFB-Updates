@@ -1,11 +1,11 @@
 {
   "product": "NAUDIO_SMART_MIXING",
   "channel": "stable",
-  "version": "1.0.198",
-  "build": "QA198",
+  "version": "1.0.199",
+  "build": "QA199",
   "update_available": true,
-  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.198/NAUDIO_SMART_MIXING_v1.0.198.zip",
-  "sha256": "5F568E603D3252A5DDA9BACA4D89446491BAAD6F9C24CD900B356EEA1CFB3597",
-  "size": 227479587,
-  "release_notes": "Trang EQ: khung RACK 13 / 14 không còn đè lên biểu đồ EQ trên màn hình nhỏ / scale cao. Gồm luôn 1.0.197: màn hình nền mới có DYNAMIC EQ, RECORDER và đủ các dòng mixer X32 / M32, XR / MR."
+  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.199/NAUDIO_SMART_MIXING_v1.0.199.zip",
+  "sha256": "F8ACFB7DD57184A5290091AC092781FDB87280DC81BBA6C5CFFDDAB423671FD0",
+  "size": 227502423,
+  "release_notes": "Thêm nút BÁO LỖI: gửi nhật ký và ảnh app cho NAUDIO để sửa lỗi (email, mật khẩu được xóa trước khi gửi). App tự ghi lại lỗi khi bị văng và hỏi gửi ở lần mở sau. Gồm luôn 1.0.197 / 1.0.198: màn hình nền mới, khung RACK không đè EQ trên màn hình nhỏ."
 }
