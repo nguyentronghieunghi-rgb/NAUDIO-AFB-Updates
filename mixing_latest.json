@@ -1,11 +1,11 @@
 {
   "product": "NAUDIO_SMART_MIXING",
   "channel": "stable",
-  "version": "1.0.203",
-  "build": "QA203",
+  "version": "1.0.204",
+  "build": "QA204",
   "update_available": true,
-  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.203/NAUDIO_SMART_MIXING_v1.0.203.zip",
-  "sha256": "C4DE3A8570C9A6EA69508BB3E673AB2503147049270884B08D1B81978BBC94D9",
-  "size": 227532454,
-  "release_notes": "Đổi máy cho tài khoản: khi license đang ở máy khác, app báo tên máy đó và hỏi CHUYỂN LICENSE SANG MÁY NÀY (1 lần / 7 ngày, tối đa 3 lần / 12 tháng). Cài lại Windows trên cùng máy không tính lượt. License gắn thêm mainboard để chống sao chép ổ đĩa. Mọi model."
+  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.204/NAUDIO_SMART_MIXING_v1.0.204.zip",
+  "sha256": "4159724E79FC8843EB303F33FE140AA93BD0D510C87E1168E90906B3C04E759D",
+  "size": 227548405,
+  "release_notes": "Báo lỗi khi dùng WiFi của mixer: báo lỗi chưa gửi được (không có Internet) được giữ lại và tự gửi khi máy có mạng. App bị tắt do lỗi (kể cả lỗi app không kịp ghi lại): lần mở sau app đọc nhật ký lỗi của Windows và hỏi gửi báo lỗi, kèm tên lỗi. Mọi model."
 }
