@@ -1,11 +1,11 @@
 {
   "product": "NAUDIO_SMART_MIXING",
   "channel": "stable",
-  "version": "1.0.204",
-  "build": "QA204",
+  "version": "1.0.205",
+  "build": "QA205",
   "update_available": true,
-  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.204/NAUDIO_SMART_MIXING_v1.0.204.zip",
-  "sha256": "4159724E79FC8843EB303F33FE140AA93BD0D510C87E1168E90906B3C04E759D",
-  "size": 227548405,
-  "release_notes": "Báo lỗi khi dùng WiFi của mixer: báo lỗi chưa gửi được (không có Internet) được giữ lại và tự gửi khi máy có mạng. App bị tắt do lỗi (kể cả lỗi app không kịp ghi lại): lần mở sau app đọc nhật ký lỗi của Windows và hỏi gửi báo lỗi, kèm tên lỗi. Mọi model."
+  "download_url": "https://github.com/nguyentronghieunghi-rgb/NAUDIO-AFB-Updates/releases/download/mixing-v1.0.205/NAUDIO_SMART_MIXING_v1.0.205.zip",
+  "sha256": "02CE6D0B9C7B425AD863344552573D4D06EBC096CA1214ABC5216ACA6D8C7677",
+  "size": 227552450,
+  "release_notes": "FX RETURN trên XR18 / X18 / MR18: khi mixer rớt rồi quay lại với IP khác, Guard đi theo đúng mixer và trả FX RETURN về FX nội bộ; nếu lần trước bị kẹt ở USB, bấm FX RETURN là app tự trả về rồi bật lại (không còn báo \"already on USB\"). Insert và X-OVER cũng đi theo mixer khi IP đổi."
 }
